@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蓝锦鸿 · 平面设计师作品集</title>
+    <meta name="description" content="平面设计师个人作品集网站 - 品牌设计、海报、包装、视觉传达">
+
+    <!-- 国内双核浏览器（360/QQ/搜狗等）强制使用极速模式（Chrome内核）渲染 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 避免被搜索引擎转码 -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ 顶部导航 ============ -->
+    <header class="nav" id="nav">
+        <a href="#home" class="logo">LAN JINHONG<small>.designer</small></a>
+        <nav class="nav-links">
+            <a href="#work">作品</a>
+            <a href="#about">关于</a>
+            <a href="#contact">联系</a>
+        </nav>
+        <!-- 移动端汉堡菜单按钮 -->
+        <button class="menu-btn" id="menuBtn" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- ============ Hero 首屏 ============ -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <p class="hero-tag">Graphic Designer & Visual Creator</p>
+            <h1 class="hero-title">
+                <span class="line">设计是</span>
+                <span class="line">看得见的</span>
+                <span class="line highlight">思考方式。</span>
+            </h1>
+            <p class="hero-desc">
+                我是蓝锦鸿，一名兼具传统广告落地与新媒体电商思维的平面/视觉设计师。<br>
+                下面是我的作品，敬请查看。
+            </p>
+            <a href="#work" class="btn-primary">查看作品 →</a>
+        </div>
+
+        <!-- 滚动提示 -->
+        <div class="scroll-hint">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============ 作品区 ============ -->
+    <section class="work" id="work">
+        <div class="section-head">
+            <h2 class="section-title">精选作品</h2>
+            <p class="section-sub">Selected Works</p>
+        </div>
+
+        <!-- 分类筛选按钮 -->
+        <div class="filter-wrap">
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="amazon">亚马逊</button>
+                <button class="filter-btn" data-filter="brand">VI/IP设计</button>
+                <button class="filter-btn" data-filter="brand-design">品牌设计</button>
+                <button class="filter-btn" data-filter="poster">海报</button>
+                <button class="filter-btn" data-filter="package">包装</button>
+                <button class="filter-btn" data-filter="video">视频展示</button>
+            </div>
+            <button class="work-toggle" id="workToggle">收起作品 ▲</button>
+        </div>
+
+        <!-- 作品网格 -->
+        <div class="grid" id="grid">
+            <!-- 亚马逊：3张 -->
+            <div class="card" data-category="amazon">
+                <div class="card-img">
+                    <img src="assets/img/work1.jpg" alt="作品1" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">亚马逊</span>
+                        <h3>洗衣机花朵门口</h3>
+                        <p>亚马逊 Listing 产品视觉设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="amazon">
+                <div class="card-img">
+                    <img src="assets/img/work5.jpg" alt="作品5" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">亚马逊</span>
+                        <h3>郁金香造型自浇水球</h3>
+                        <p>亚马逊 Listing 产品视觉设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="amazon">
+                <div class="card-img">
+                    <img src="assets/img/work9.jpg" alt="作品9" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">亚马逊</span>
+                        <h3>综合逗猫半自动喂食器</h3>
+                        <p>亚马逊 Listing 产品视觉设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 品牌设计：3张 -->
+            <div class="card" data-category="brand-design">
+                <div class="card-img">
+                    <img src="assets/img/work10.jpg" alt="作品10" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">品牌设计</span>
+                        <h3>护肤品标签 一</h3>
+                        <p>护肤品标签设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="brand-design">
+                <div class="card-img">
+                    <img src="assets/img/work11.jpg" alt="作品11" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">品牌设计</span>
+                        <h3>护肤品标签 二</h3>
+                        <p>护肤品标签设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="brand-design">
+                <div class="card-img">
+                    <img src="assets/img/work12.jpg" alt="作品12" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">品牌设计</span>
+                        <h3>护肤品标签 三</h3>
+                        <p>护肤品标签设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 海报：6张 -->
+            <div class="card" data-category="poster">
+                <div class="card-img">
+                    <img src="assets/img/work2.jpg" alt="作品2" data-fallback="poster">
+                    <div class="card-overlay">
+                        <span class="card-cat">海报</span>
+                        <h3>咖啡海报</h3>
+                        <p>咖啡主题商业海报设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="poster">
+                <div class="card-img">
+                    <img src="assets/img/work6.jpg" alt="作品6" data-fallback="poster">
+                    <div class="card-overlay">
+                        <span class="card-cat">海报</span>
+                        <h3>普时代海报</h3>
+                        <p>商业主题海报设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="poster">
+                <div class="card-img">
+                    <img src="assets/img/work13.jpg" alt="作品13" data-fallback="poster">
+                    <div class="card-overlay">
+                        <span class="card-cat">海报</span>
+                        <h3>亚运会海报</h3>
+                        <p>体育赛事主题海报设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="poster">
+                <div class="card-img">
+                    <img src="assets/img/work14.jpg" alt="作品14" data-fallback="poster">
+                    <div class="card-overlay">
+                        <span class="card-cat">海报</span>
+                        <h3>世界环境日海报</h3>
+                        <p>公益环保主题海报设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="poster">
+                <div class="card-img">
+                    <img src="assets/img/work15.jpg" alt="作品15" data-fallback="poster">
+                    <div class="card-overlay">
+                        <span class="card-cat">海报</span>
+                        <h3>传统纸文化海报</h3>
+                        <p>传统文化主题海报设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="poster">
+                <div class="card-img">
+                    <img src="assets/img/work16.jpg" alt="作品16" data-fallback="poster">
+                    <div class="card-overlay">
+                        <span class="card-cat">海报</span>
+                        <h3>舞蹈宣传海报</h3>
+                        <p>演出宣传海报设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VI/IP设计：3张 -->
+            <div class="card" data-category="brand">
+                <div class="card-img">
+                    <img src="assets/img/work4.jpg" alt="作品4" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">VI/IP设计</span>
+                        <h3>高山红薯IP</h3>
+                        <p>农产品IP形象设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="brand">
+                <div class="card-img">
+                    <img src="assets/img/work8.jpg" alt="作品8" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">VI/IP设计</span>
+                        <h3>姜宝VI/IP</h3>
+                        <p>品牌VI/IP形象设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="brand">
+                <div class="card-img">
+                    <img src="assets/img/work17.jpg" alt="作品17" data-fallback="brand">
+                    <div class="card-overlay">
+                        <span class="card-cat">VI/IP设计</span>
+                        <h3>古韵潮州文创VI</h3>
+                        <p>文创品牌VI设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 包装：3张 -->
+            <div class="card" data-category="package">
+                <div class="card-img">
+                    <img src="assets/img/work3.jpg" alt="作品3" data-fallback="package">
+                    <div class="card-overlay">
+                        <span class="card-cat">包装</span>
+                        <h3>标签盒包装</h3>
+                        <p>产品包装设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="package">
+                <div class="card-img">
+                    <img src="assets/img/work7.jpg" alt="作品7" data-fallback="package">
+                    <div class="card-overlay">
+                        <span class="card-cat">包装</span>
+                        <h3>饼干包装</h3>
+                        <p>食品包装设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="package">
+                <div class="card-img">
+                    <img src="assets/img/work18.jpg" alt="作品18" data-fallback="package">
+                    <div class="card-overlay">
+                        <span class="card-cat">包装</span>
+                        <h3>包装盒</h3>
+                        <p>产品包装设计</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="video" data-link="https://v.douyin.com/voxveULfz0w/">
+                <div class="card-img">
+                    <img src="assets/img/video1.jpg" alt="视频1" data-fallback="video">
+                    <div class="card-overlay">
+                        <span class="card-cat">▶ 视频展示</span>
+                        <h3>视频作品 一</h3>
+                        <p>点击观看完整视频</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="video" data-link="https://v.douyin.com/cAZHIg3NJ-g/">
+                <div class="card-img">
+                    <img src="assets/img/video2.jpg" alt="视频2" data-fallback="video">
+                    <div class="card-overlay">
+                        <span class="card-cat">▶ 视频展示</span>
+                        <h3>视频作品 二</h3>
+                        <p>点击观看完整视频</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="video" data-link="https://v.douyin.com/W8B2eeM09eE/">
+                <div class="card-img">
+                    <img src="assets/img/video3.jpg" alt="视频3" data-fallback="video">
+                    <div class="card-overlay">
+                        <span class="card-cat">▶ 视频展示</span>
+                        <h3>视频作品 三</h3>
+                        <p>点击观看完整视频</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 关于我 ============ -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2 class="section-title">关于我</h2>
+                <p>
+                    我是一名兼具传统广告落地与新媒体电商思维的平面/视觉设计师。专注于<strong>品牌视觉识别</strong>、
+                    <strong>海报设计</strong>、<strong>包装设计</strong>以及<strong>亚马逊视觉优化</strong>。
+                </p>
+                <p>
+                    我具备从创意构思到落地交付的全链路能力。不仅能独立完成政企项目的实地调研、设计优化与现场安装验收，也能熟练运作新媒体视频（脚本-剪辑-发布）与亚马逊 Listing 主图/A+ 页面设计。我擅长用数据驱动设计，曾通过视觉优化有效提升视频完播率与产品点击转化率。我坚信好的设计应当兼具美感与功能性，致力于在每一个项目中实现创意表达与商业目标的完美契合。
+                </p>
+                <div class="skills">
+                    <span class="skill">亚马逊设计</span>
+                    <span class="skill">VI/IP设计</span>
+                    <span class="skill">海报设计</span>
+                    <span class="skill">包装设计</span>
+                    <span class="skill">视频剪辑</span>
+                    <span class="skill">AI辅助出图</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 联系方式 ============ -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <h2 class="section-title">一起合作吧</h2>
+            <p class="contact-sub">有设计需求或合作意向，欢迎随时联系我</p>
+            <a href="mailto:2268557177@qq.com" class="btn-primary big">2268557177@qq.com</a>
+            <div class="socials">
+                <span>微信联系：13825465582</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 蓝锦鸿. All rights reserved. Designed & Built with ♥</p>
+    </footer>
+
+    <!-- ============ 图片放大查看模态框 ============ -->
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose">×</button>
+        <img src="" alt="" id="modalImg">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

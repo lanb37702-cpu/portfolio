@@ -1,0 +1,308 @@
+/* ============================================
+   平面设计师作品集 - IE兼容版样式表
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #0d0d0d;
+    color: #f0f0f0;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    line-height: 1.7;
+}
+
+img { max-width: 100%; display: block; border: none; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------- 顶部导航 ---------- */
+.nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,13,13,0.95);
+    padding: 12px 6%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: justify;
+}
+.nav:after { content: ''; display: inline-block; width: 100%; }
+
+.logo {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+}
+.logo small {
+    font-weight: 300;
+    font-size: 12px;
+    color: #ff5a1f;
+    margin-left: 4px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: inline-block;
+    vertical-align: middle;
+}
+.nav-links a {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+    margin-left: 36px;
+}
+.nav-links a:hover { color: #f0f0f0; }
+
+/* ---------- Hero 首屏 ---------- */
+.hero {
+    min-height: 600px;
+    padding: 120px 6% 80px;
+    background: #0d0d0d;
+}
+.hero-inner { max-width: 900px; }
+.hero-tag {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #ff5a1f;
+    margin-bottom: 24px;
+}
+.hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+}
+.hero-title .line { display: block; }
+.hero-title .highlight { color: #ff5a1f; font-style: italic; }
+.hero-desc {
+    font-size: 16px;
+    color: #999;
+    max-width: 540px;
+    margin-bottom: 40px;
+}
+.hero-desc strong { color: #f0f0f0; }
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #ff5a1f;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+.btn-primary.big {
+    font-size: 24px;
+    padding: 22px 56px;
+    font-weight: 700;
+    border-radius: 50px;
+}
+
+/* ---------- 通用区块标题 ---------- */
+.section-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.section-sub {
+    color: #ff5a1f;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+}
+
+/* ---------- 作品区 ---------- */
+.work { padding: 80px 6%; }
+
+.filter-wrap {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.filters {
+    margin-bottom: 16px;
+}
+.filter-btn {
+    display: inline-block;
+    padding: 8px 22px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #999;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 0 4px;
+    font-family: inherit;
+}
+.filter-btn.active {
+    background: #ff5a1f;
+    border-color: #ff5a1f;
+    color: #fff;
+}
+.work-toggle {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* 作品网格 - 用float代替Grid */
+.grid {
+    overflow: hidden;
+    margin: 0 -12px;
+}
+.grid.collapsed { display: none; }
+.card {
+    float: left;
+    width: 33.333%;
+    padding: 12px;
+    cursor: pointer;
+}
+.card.hide { display: none; }
+
+/* 不同分类不同尺寸 - 用padding-top技巧 */
+.card-img {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 默认 */
+    overflow: hidden;
+    background: #161616;
+}
+.card[data-category="amazon"] .card-img { padding-top: 100%; }     /* 1:1 */
+.card[data-category="poster"] .card-img { padding-top: 133.33%; }  /* 3:4 */
+.card[data-category="brand"] .card-img { padding-top: 141.4%; }    /* A4 */
+.card[data-category="video"] .card-img { padding-top: 56.25%; }    /* 16:9 视频比例 */
+.card-img img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.card-overlay {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp82dcAAAAFklEQVQ4T2P8z8BQz0AFDDCgUQMA9+sC8f7pB5EAAAAASUVORK5CYII=) repeat-x bottom;
+    padding: 24px;
+    display: none;
+}
+.card:hover .card-overlay { display: block; }
+.card-cat {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #ff5a1f;
+    margin-bottom: 6px;
+}
+.card-overlay h3 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    font-family: Georgia, serif;
+}
+.card-overlay p {
+    font-size: 13px;
+    color: #999;
+}
+
+/* ---------- 关于我 ---------- */
+.about {
+    padding: 80px 6%;
+    background: #161616;
+}
+.about-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-text p {
+    color: #999;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+.about-text strong { color: #f0f0f0; }
+.skills {
+    margin-top: 24px;
+    text-align: center;
+}
+.skill {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    font-size: 13px;
+    color: #f0f0f0;
+    margin: 5px;
+}
+
+/* ---------- 联系方式 ---------- */
+.contact {
+    padding: 100px 6%;
+    text-align: center;
+}
+.contact-inner { max-width: 700px; margin: 0 auto; }
+.contact-sub {
+    color: #999;
+    margin: 16px 0 36px;
+}
+.socials {
+    margin-top: 50px;
+    text-align: center;
+}
+.socials span {
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* ---------- 页脚 ---------- */
+.footer {
+    padding: 30px 6%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #999;
+    font-size: 13px;
+}
+
+/* ---------- 图片放大模态框 ---------- */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 200;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    text-align: center;
+    padding: 5%;
+}
+.modal.show { display: block; }
+.modal img {
+    max-width: 90%;
+    max-height: 85%;
+    margin-top: 2%;
+}
+.modal-caption {
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.modal-close {
+    position: absolute;
+    top: 20px; right: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ---------- 图片加载失败占位 ---------- */
+[data-fallback="brand"] { background: #2a1810; }
+[data-fallback="poster"] { background: #101a2a; }
+[data-fallback="package"] { background: #102a1a; }
+[data-fallback="amazon"] { background: #2a1810; }
+[data-fallback="brand-design"] { background: #2a1810; }
