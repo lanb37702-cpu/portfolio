@@ -70,6 +70,11 @@ window.onload = function () {
     for (var i = 0; i < cards.length; i++) {
         (function (card) {
             card.onclick = function () {
+                var vlink = card.getAttribute('data-link');
+                if (vlink) {
+                    window.open(vlink, '_blank');
+                    return;
+                }
                 var img = card.getElementsByTagName('img')[0];
                 var title = '';
                 var desc = '';
